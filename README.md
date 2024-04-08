@@ -1,4 +1,4 @@
-<h2 align="left">Welcome! I'm Mzg...</h2>
+<h2 align="left">Welcome! I'm Mzg 😅...</h2>
 
 ###
 
@@ -9,7 +9,9 @@
 
 ###
 
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+<div align="center">
+  <img height="200" src="https://cdn5.colorir.com/desenhos/color/2011009/cccbed794a351111736a18eaf03d33f3.png"  />
+</div>
 
 ###
 
