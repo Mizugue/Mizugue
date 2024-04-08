@@ -62,8 +62,6 @@
 
 ###
 
-<br clear="both">
 
-<img src="https://raw.githubusercontent.com/Mizugue/Mizugue/output/snake.svg" alt="Snake animation" />
 
 
