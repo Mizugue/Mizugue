@@ -36,7 +36,6 @@ char *fetch_data(char *url) {
         curl_easy_setopt(curl, CURLOPT_URL, url);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL); 
         res = curl_easy_perform(curl);
-        /* Tratar erros com base em res */
         curl_easy_cleanup(curl);
         return NULL; 
     }
@@ -55,7 +54,7 @@ int download_image(char *image_url, char *filename) {
         res = curl_easy_perform(curl);
         /* Tratar erros com base em res */
         curl_easy_cleanup(curl);
-        return 0; // Assumindo download bem-sucedido
+        return 0; 
     }
     return 1;
 }
