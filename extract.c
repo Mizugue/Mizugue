@@ -3,9 +3,6 @@
 #include <stdlib.h>
 #include <curl/curl.h>
 
-#define GOOGLE_SEARCH_BASE_URL "https://www.google.com/search?q="
-#define GOOGLE_IMAGE_SEARCH_PARAM "&tbm=isch"
-
 char search_query[1024];
 CURL *curl;
 CURLcode res;
@@ -16,7 +13,7 @@ int get_user_input() {
         fprintf(stderr, "Erro ao ler a entrada\n");
         return 1;
     }
-    search_query[strcspn(search_query, "\n")] = '\0'; // Remove newline
+    search_query[strcspn(search_query, "\n")] = '\0'; 
     return 0;
 }
 
@@ -37,18 +34,17 @@ char *fetch_data(char *url) {
     curl = curl_easy_init();
     if (curl) {
         curl_easy_setopt(curl, CURLOPT_URL, url);
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL); // Não há necessidade de função de callback de escrita aqui
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL); 
         res = curl_easy_perform(curl);
         /* Tratar erros com base em res */
         curl_easy_cleanup(curl);
-        return NULL; // Nenhuma extração de dados neste exemplo simplificado
+        return NULL; 
     }
     return NULL;
 }
 
 char *extract_image_url(char *data) {
-    // A lógica de análise para extrair a URL da imagem vai aqui (substitua pela análise real)
-    return NULL; // Sem análise neste exemplo
+    return NULL; 
 }
 
 int download_image(char *image_url, char *filename) {
@@ -75,7 +71,7 @@ int main() {
     fetch_data(url);
     free(url);
 
-    // Extrair a URL da imagem e fazer o download (substitua por código real)
+
     char *image_url = extract_image_url(data);
     if (image_url != NULL) {
         if (download_image(image_url, "imagem.png")) {
