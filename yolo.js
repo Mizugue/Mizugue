@@ -1,2 +1,2 @@
-console.log("For the yolo ")
-console.log("For you")
+console.log("For the yolo")
+
